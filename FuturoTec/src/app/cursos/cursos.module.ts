@@ -12,8 +12,12 @@ import { CursosPage } from './cursos.page';
     CommonModule,
     FormsModule,
     IonicModule,
+
     CursosPageRoutingModule,
-    CursosPage
+    CursosPage,
+
+    CursosPageRoutingModule
+
   ]
 })
 export class CursosPageModule {}

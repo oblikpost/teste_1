@@ -13,6 +13,8 @@ const routes: Routes = [
 @NgModule({
   imports: [
     RouterModule.forChild(routes),
+    CadastroPage 
+
   ],
   exports: [RouterModule],
 })
