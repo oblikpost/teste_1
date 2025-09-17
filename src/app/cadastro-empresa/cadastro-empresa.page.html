@@ -1,0 +1,69 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <img src="assets/images/Logo.jpeg" alt="Futuro TEC Logo" class="logo-img">
+    </ion-buttons>
+    
+    <ion-buttons slot="primary" class="ion-hide-md-down header-nav-links">
+      <ion-button routerLink="/home">Início</ion-button>
+      <ion-button routerLink="/sobre">Sobre</ion-button>
+      <ion-button routerLink="/cursos">Cursos</ion-button>
+      <ion-button routerLink="/cadastro" class="active-link">Cadastro</ion-button>
+    </ion-buttons>
+    
+    <ion-buttons slot="end" class="ion-hide-md-down">
+      <ion-button routerLink="/login" class="login-button">Login</ion-button>
+    </ion-buttons>
+
+    <ion-menu-button slot="end" auto-hide="false" class="ion-hide-md-up"></ion-menu-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="form-container">
+    <div class="form-box">
+      <h2>Cadastro da Empresa</h2>
+
+      <form (ngSubmit)="registrarEmpresa()" class="form-wrapper">
+        
+        <div class="input-field">
+          <label for="nome-fantasia">Nome Fantasia:</label>
+          <ion-input id="nome-fantasia" type="text" fill="solid" required></ion-input>
+        </div>
+
+        <div class="input-field">
+          <label for="razao-social">Razão Social:</label>
+          <ion-input id="razao-social" type="text" fill="solid" required></ion-input>
+        </div>
+
+        <div class="input-field">
+          <label for="cnpj">CNPJ:</label>
+          <ion-input id="cnpj" type="text" fill="solid" required></ion-input>
+        </div>
+
+        <div class="input-field">
+          <label for="email-corp">Email Corporativo:</label>
+          <ion-input id="email-corp" type="email" fill="solid" required></ion-input>
+        </div>
+
+        <div class="input-field">
+          <label for="senha">Senha:</label>
+          <ion-input id="senha" [type]="showPassword ? 'text' : 'password'" fill="solid" required>
+            <ion-button fill="clear" slot="end" (click)="togglePassword()" class="password-toggle" aria-label="Mostrar/Ocultar senha">
+              <ion-icon slot="icon-only" [name]="passwordIcon"></ion-icon>
+            </ion-button>
+          </ion-input>
+        </div>
+
+        <ion-button type="submit" expand="block" class="submit-button">
+          Criar Conta
+        </ion-button>
+
+      </form>
+
+      <div class="footer-link">
+        Já possui uma conta? <a (click)="goToLogin()">Fazer Login</a>
+      </div>
+    </div>
+  </div>
+</ion-content>

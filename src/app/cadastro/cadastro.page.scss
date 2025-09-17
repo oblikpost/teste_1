@@ -1,0 +1,139 @@
+/* Importando estilos comuns do header do home.page.scss para manter a consistência */
+ion-header {
+    ion-toolbar {
+        --min-height: 120px; 
+        --background: #fff;
+        --padding-start: 25px;
+        --padding-end: 25px;
+        display: flex;
+        align-items: center;
+    }
+}
+
+.logo-img {
+    height: 80px;
+}
+
+.nav-button {
+    color: #333;
+    --background: transparent;
+    font-weight: 500;
+    text-transform: capitalize;
+    margin-right: 30px;
+    font-size: 1.1em;
+}
+
+.login-button {
+    --background: #23586a; // Cor padrão do botão Login
+    --color: #fff;
+    --border-radius: 5px;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-left: 10px;
+    font-size: 1.1em;
+}
+
+/* Estilo específico para o botão "Cadastra-se" (ativo) como na imagem tela-1.jpg */
+.cadastra-se-button {
+    --background: #31a3b1; // Tom de ciano/verde-água mais brilhante
+    --color: #fff;
+    --border-radius: 5px;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-left: 10px;
+    font-size: 1.1em;
+}
+
+/* Estilos do Conteúdo da Página de Cadastro */
+
+ion-content {
+    --background: #fff; // Fundo branco
+}
+
+.register-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100% - 120px); // Ajusta a altura descontando o header
+    max-width: 1200px;
+    margin: auto;
+}
+  
+.register-options {
+    display: flex;
+    flex-direction: column;
+    gap: 25px; // Espaço entre os botões
+    padding: 20px;
+
+    h1 {
+        font-size: 2.8rem;
+        font-weight: 700;
+        color: #333;
+        margin-bottom: 20px;
+    }
+}
+
+.register-option-button {
+    --background: #31a3b1; // Cor dos botões grandes (o mesmo ciano/verde-água)
+    --color: #fff;
+    --border-radius: 10px;
+    height: 110px; // Altura maior para os botões
+    display: flex;
+    justify-content: flex-start; /* Alinha o conteúdo à esquerda dentro do botão */
+    --padding-start: 25px;
+    --box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+    ion-icon {
+        font-size: 3rem; // Ícone grande
+        margin-right: 20px;
+    }
+
+    .button-text {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+        text-transform: none; // Remove o uppercase padrão do botão
+
+        strong {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        p {
+            font-size: 1rem;
+            margin: 0;
+            font-weight: 300;
+            white-space: normal;
+        }
+    }
+}
+
+.image-col {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.register-image {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    object-fit: cover;
+    max-height: 550px;
+}
+
+/* Ajustes para telas menores (como no home.scss) */
+@media (max-width: 768px) {
+    ion-header {
+        ion-toolbar {
+            --min-height: 100px;
+        }
+    }
+    .logo-img {
+        height: 60px;
+    }
+    .register-options h1 {
+        font-size: 2.2rem;
+        text-align: center;
+    }
+}

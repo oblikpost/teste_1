@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <img src="assets/images/Logo.jpeg" alt="Futuro TEC Logo" class="logo-img">
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button routerLink="/home" class="nav-button ion-hide-md-down">Início</ion-button>
+      <ion-button routerLink="/vagas" class="nav-button ion-hide-md-down">Vagas</ion-button>
+      <ion-button routerLink="/cursos" class="nav-button ion-hide-md-down">Cursos</ion-button>
+      <ion-button routerLink="/perfil" class="nav-button ion-hide-md-down">Perfil</ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button routerLink="/login" class="login-button">Login</ion-button>
+      <ion-button routerLink="/cadastro" class="cadastra-se-button">Cadastra-se</ion-button>
+    </ion-buttons>
+    <ion-menu-button slot="end" auto-hide="false" class="ion-hide-md-up"></ion-menu-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <div class="register-container">
+    <ion-grid>
+      <ion-row class="ion-align-items-center ion-justify-content-center">
+
+        <ion-col size-lg="5" size-md="6" size-sm="12">
+          <div class="register-options">
+            <h1>Crie uma conta:)</h1>
+            
+            <ion-button class="register-option-button" expand="block" (click)="irParaCadastroCandidato()">
+              <ion-icon slot="start" name="person-outline"></ion-icon>
+              <div class="button-text">
+                <strong>Sou candidato</strong>
+                <p>Estou a procura de estágios</p>
+              </div>
+            </ion-button>
+
+            <ion-button class="register-option-button" expand="block" (click)="irParaCadastroEmpresa()">
+              <ion-icon slot="start" name="briefcase-outline"></ion-icon>
+              <div class="button-text">
+                <strong>Sou empresa</strong>
+                <p>Quero anunciar estágios</p>
+              </div>
+            </ion-button>
+          </div>
+        </ion-col>
+        
+        <ion-col size-lg="5" size-md="6" size-sm="12" class="ion-hide-md-down image-col">
+          <img src="assets/images/cadastro-image.jpg" alt="Pessoas em reunião" class="register-image" />
+        </ion-col>
+
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>
